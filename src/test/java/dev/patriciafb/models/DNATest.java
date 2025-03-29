@@ -1,6 +1,8 @@
 package dev.patriciafb.models;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 
 public class DNATest {
@@ -11,8 +13,7 @@ public class DNATest {
     }
 
     @Test
-    void testEmptyDNASequence() {
-        DNA dna = new DNA("");
-        assertEquals("", dna.getSequence());
-    }
+        void testEmptyDNASequence() {
+        assertThrows(IllegalArgumentException.class, () -> new DNA(""));
+}
 }
