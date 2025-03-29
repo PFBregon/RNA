@@ -24,11 +24,12 @@ class NucleotideTest {
     }
 
     @Test
-void testEmptySequence() {
-    assertThrows(IllegalArgumentException.class, () -> new TestNucleotide(""));
-}
-
-
-
-
+        void testEmptySequence() {
+        assertThrows(IllegalArgumentException.class, () -> new TestNucleotide(""));
+    }
+    @Test
+    void testToStringMethod() {
+        TestNucleotide sequence = new TestNucleotide("GCTA");
+        assertEquals("GCTA", sequence.toString());
+    }
 }
