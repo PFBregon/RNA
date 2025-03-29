@@ -17,4 +17,8 @@ public abstract class Nucleotide {
     protected boolean isValidSequence(String sequence) {
         return sequence.matches("[GCTA]+");
     }
+
+    public String toString() {
+        return sequence;
+    }
 }
