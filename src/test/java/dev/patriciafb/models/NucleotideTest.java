@@ -1,6 +1,8 @@
 package dev.patriciafb.models;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 
 class NucleotideTest {
@@ -15,5 +17,10 @@ class NucleotideTest {
     void testValidSequence() {
         TestNucleotide sequence = new TestNucleotide("GCTA");
         assertEquals("GCTA", sequence.getSequence());
+    }
+
+     @Test
+    void testNullSequence() {
+        assertThrows(IllegalArgumentException.class, () -> new TestNucleotideSequence(null));
     }
 }
