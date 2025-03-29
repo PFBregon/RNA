@@ -15,5 +15,10 @@ public class DNATest {
     @Test
         void testEmptyDNASequence() {
         assertThrows(IllegalArgumentException.class, () -> new DNA(""));
-}
+    }
+
+    @Test
+    void testInvalidDNASequence_InvalidCharacters() {
+        assertThrows(IllegalArgumentException.class, () -> new DNA("XYZ"));
+    }
 }
