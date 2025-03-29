@@ -21,7 +21,13 @@ class NucleotideTest {
     @Test
         void testNullSequence() {
         assertThrows(IllegalArgumentException.class, () -> new TestNucleotide(null));
-}
+    }
+
+    @Test
+    void testEmptySequence() {
+        TestNucleotide sequence = new TestNucleotide("");
+        assertEquals("", sequence.getSequence());
+    }
 
 
 
