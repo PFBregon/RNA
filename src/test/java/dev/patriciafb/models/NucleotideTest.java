@@ -24,10 +24,9 @@ class NucleotideTest {
     }
 
     @Test
-    void testEmptySequence() {
-        TestNucleotide sequence = new TestNucleotide("");
-        assertEquals("", sequence.getSequence());
-    }
+void testEmptySequence() {
+    assertThrows(IllegalArgumentException.class, () -> new TestNucleotide(""));
+}
 
 
 

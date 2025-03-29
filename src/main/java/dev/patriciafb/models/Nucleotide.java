@@ -4,7 +4,7 @@ public abstract class Nucleotide {
     private String sequence;
 
     public Nucleotide(String sequence) {
-        if (sequence == null || !isValidSequence(sequence)) {
+        if (sequence == null || sequence.isEmpty() || !isValidSequence(sequence)) {
             throw new IllegalArgumentException("Invalid nucleotide sequence");
         }
         this.sequence = sequence;
@@ -15,6 +15,6 @@ public abstract class Nucleotide {
     }
 
     protected boolean isValidSequence(String sequence) {
-        return sequence.isEmpty() || sequence.matches("[GCTA]+");
+        return sequence.matches("[GCTA]+");
     }
 }
