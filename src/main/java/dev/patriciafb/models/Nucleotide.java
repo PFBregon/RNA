@@ -4,7 +4,7 @@ public abstract class Nucleotide {
     private String sequence;
 
     public Nucleotide(String sequence) {
-        if (!isValidSequence(sequence)) {
+        if (sequence == null || !isValidSequence(sequence)) {
             throw new IllegalArgumentException("Invalid nucleotide sequence");
         }
         this.sequence = sequence;
