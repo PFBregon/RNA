@@ -18,9 +18,10 @@ class NucleotideTest {
         TestNucleotide sequence = new TestNucleotide("GCTA");
         assertEquals("GCTA", sequence.getSequence());
     }
-
      @Test
     void testNullSequence() {
         assertThrows(IllegalArgumentException.class, () -> new TestNucleotideSequence(null));
     }
+
+
 }
