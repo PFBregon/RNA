@@ -9,4 +9,10 @@ public class DNATest {
         DNA dna = new DNA("GCTA");
         assertEquals("GCTA", dna.getSequence());
     }
+
+    @Test
+    void testEmptyDNASequence() {
+        DNA dna = new DNA("");
+        assertEquals("", dna.getSequence());
+    }
 }
